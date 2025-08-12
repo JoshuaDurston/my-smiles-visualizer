@@ -31,7 +31,11 @@ from rd_render import is_valid_smiles, process_smiles
 from rd_render import get_smiles_from_input
 from smiles_engine import render_from_smiles
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    layout="wide",
+    page_title="SMILES Visualizer",
+    set_icon="⌬"
+    )
 st.title("MyChemStudy: SMILES Compound Visualizer")
 
 # Initialize global smiles variable in session state (default: ethanol)
