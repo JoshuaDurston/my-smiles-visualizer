@@ -34,7 +34,7 @@ from smiles_engine import render_from_smiles
 st.set_page_config(
     layout="wide",
     page_title="SMILES Visualizer",
-    set_icon="⌬"
+    page_icon="🔬"
     )
 st.title("MyChemStudy: SMILES Compound Visualizer")
 
