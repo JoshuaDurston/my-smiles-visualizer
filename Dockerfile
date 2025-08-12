@@ -1,22 +1,14 @@
-FROM python:3.11-slim
+FROM continuumio/miniconda3
 
+# Install system dependencies needed for RDKit
 RUN apt-get update && apt-get install -y \
-    build-essential \
-    python3-pip \
-    python3-dev \
     libgl1-mesa-glx \
     libglib2.0-0 \
-    wget \
     && rm -rf /var/lib/apt/lists/*
 
-# Install RDKit using conda
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh \
-    && bash miniconda.sh -b -p /opt/conda \
-    && rm miniconda.sh
-
-ENV PATH=/opt/conda/bin:$PATH
-
-RUN conda install -c conda-forge rdkit=2023.3.1 python=3.11 -y
+# Update conda and install python 3.11 and RDKit
+RUN conda update -n base -c defaults conda -y && \
+    conda install -c conda-forge python=3.11 rdkit=2023.3.1 -y
 
 WORKDIR /app
 COPY . /app

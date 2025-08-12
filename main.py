@@ -64,7 +64,7 @@ with left_col:
     st.markdown(
         """
         ### RDKit-based Molecular Visualization & Properties
-        This left section uses RDKit to generate a 2D structure of the molecule.  
+        This section uses RDKit to generate a 2D structure of the molecule.  
         The molecule is placed on a triangular lattice by analyzing neighbors and snapping atoms to grid points.  
         It also fetches molecular properties and synonyms from PubChem to give a fuller chemical overview.
         """
@@ -136,7 +136,7 @@ with right_col:
     st.markdown(
         """
         ### Custom SMILES Parsing & Layout Engine  
-        This right panel does not rely on RDKit or any external chemistry libraries. Instead, it parses SMILES strings using a custom-built Python parser that interprets atoms, bonds, branches, and ring closures through explicit rules and heuristics.
+        This section does not rely on RDKit or any external chemistry libraries. Instead, it parses SMILES strings using a custom-built Python parser that interprets atoms, bonds, branches, and ring closures through explicit rules and heuristics.
 
         It reconstructs the molecule’s atomic connectivity and bond orders into an internal graph representation, then generates 2D coordinates for visualization by placing rings as regular polygons and arranging other atoms via force-directed layout algorithms.
 

@@ -8,7 +8,7 @@ This project is designed primarily as a learning tool to help me practice chemis
 - Python 3.11.9 is recommended for best compatibility.
 
 1. Clone the repo  
-2. Install dependencies: `pip install -r requirements.txt`  
+2. Install dependencies: `pip install -r requirements.txt rdkit-pypi`  
 3. Run: `streamlit run main.py`
 
 ## Features
